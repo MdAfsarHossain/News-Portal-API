@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Portal</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/news.png" type="image/x-icon" />
+
+    <!-- Tailwind and DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <!-- Navbar -->
+      <nav class="border-b-2 ml-28 mr-28 mx-auto">
+        <div class="py-5 px-10 navbar bg-base-100">
+          <div class="flex-1">
+            <a
+              class="btn rounded bg-blue-600 text-white text-xl mr-5 border-2 border-blue-600 hover:bg-transparent hover:border-blue-600 hover:text-blue-600"
+              href="./index.html"
+              >News</a
+            >
+            <a class="text-blue-600 font-bold text-xl cursor-pointer">Portal</a>
+          </div>
+          <div class="flex-none">
+            <ul class="flex flex-row justify-center items-center gap-5 px-1">
+              <li>
+                <a
+                  href="./index.html"
+                  class="font-bold text-xl hover:text-blue-600"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a
+                  class="font-bold text-xl hover:text-blue-600"
+                  href="./blog.html"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <div class="cursor-pointer avatar">
+                  <div
+                    class="ring-primary ring-offset-base-100 w-8 rounded-full ring ring-offset-2"
+                  >
+                    <img
+                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="ml-36 mr-36 mx-auto mt-14">
+      <!-- Var -->
+      <div class="border-2 rounded-lg px-5 py-5 shadow-xl mb-10">
+        <h1 class="font-bold text-3xl mb-2">What is var in Js?</h1>
+        <p>
+          In JavaScript, var is one of the ways to declare variables. It was
+          introduced in ECMAScript 3 (ES3) and is still valid, though it has
+          some characteristics that differ from the modern let and const
+          keywords introduced in ECMAScript 6 (ES6). Here’s a breakdown of var:
+        </p>
+        <!-- Code -->
+        <div class="mockup-code mt-5">
+          <pre data-prefix="">
+          <code>
+        console.log(x); // undefined, not ReferenceError
+        var x = 5;
+        console.log(x); // 5
+          </code></pre>
+        </div>
+      </div>
+
+      <!-- Let -->
+      <div class="border-2 rounded-lg px-5 py-5 shadow-xl mb-10">
+        <h1 class="font-bold text-3xl mb-2">What is let in Js?</h1>
+        <p>
+          In JavaScript, let is a keyword introduced in ECMAScript 6 (ES6) for
+          declaring variables. It offers several improvements over the older var
+          keyword, particularly in terms of scope and behavior. Here’s a
+          detailed overview of let and its features:
+        </p>
+        <!-- Code -->
+        <div class="mockup-code mt-5">
+          <pre data-prefix="">
+          <code>
+        let y = 10;
+        console.log(y); // 10
+        let y = 20; // SyntaxError: Identifier 'y' has already been declared
+            
+          </code></pre>
+        </div>
+      </div>
+
+      <!-- Const -->
+      <div class="border-2 rounded-lg px-5 py-5 shadow-xl mb-10">
+        <h1 class="font-bold text-3xl mb-2">What is const in Js?</h1>
+        <p>
+          In JavaScript, const is a keyword introduced in ECMAScript 6 (ES6) for
+          declaring variables that are meant to be constant, or immutable. While
+          const does not make the value itself immutable, it does ensure that
+          the variable identifier cannot be reassigned once it is set. Here’s a
+          detailed look at const and its features:
+        </p>
+        <!-- Code -->
+        <div class="mockup-code mt-5">
+          <pre data-prefix="">
+          <code>
+        const y = 10;
+        console.log(y); // 10
+        y = 20; // TypeError: Assignment to constant variable
+            
+          </code></pre>
+        </div>
+      </div>
+
+      <!-- Null and undefined  -->
+      <div class="border-2 rounded-lg px-5 py-5 shadow-xl mb-10">
+        <h1 class="font-bold text-3xl mb-2">
+          The use case of null and undefined in JS:
+        </h1>
+        <h3 class="font-bold text-2xl">null:</h3>
+        <p>
+          <span class="font-bold">null</span> is an assignment value that
+          represents the intentional absence of any object value. It is often
+          used to indicate that a variable should have no value or to signify
+          that a property or object has been intentionally left empty.
+        </p>
+        <ul class="list-disc pl-10">
+          <li>Represents the intentional absence of value.</li>
+          <li>Used to explicitly set or reset a variable to have no value.</li>
+          <li>
+            Indicates that an object property or function result is
+            intentionally left empty or not available.
+          </li>
+        </ul>
+
+        <!-- Undefined -->
+        <h3 class="mt-5 font-bold text-2xl">undefined:</h3>
+        <p>
+          <span class="font-bold">undefined</span> represents a variable that
+          has been declared but has not yet been assigned a value. It is also
+          the default value for function arguments that are not provided and for
+          properties that do not exist in objects.
+        </p>
+        <ul class="list-disc pl-10">
+          <li>Default for uninitialized variables.</li>
+          <li>Used for missing function arguments.</li>
+          <li>Indicates non-existent object properties or array elements. s</li>
+        </ul>
+      </div>
+
+      <!-- Rest API -->
+      <div class="border-2 rounded-lg px-5 py-5 shadow-xl mb-10">
+        <h1 class="font-bold text-3xl mb-2">What do you mean by REST API?</h1>
+        <p>
+          A REST API (Representational State Transfer Application Programming
+          Interface) is a set of rules and conventions for creating and
+          interacting with web services. It uses HTTP methods to enable
+          communication between clients and servers, allowing for the
+          manipulation and retrieval of resources.
+        </p>
+        <!-- Code -->
+        <div class="mockup-code mt-5">
+          <pre data-prefix="">
+          <code>
+        {
+            "name": "John Doe",
+            "email": "john.doe@example.com"
+        }
+          </code></pre>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
